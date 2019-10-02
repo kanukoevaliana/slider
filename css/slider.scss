@@ -1,0 +1,46 @@
+.slider{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.slider__list{
+    display: flex;
+}
+.slider__item{
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 600px;
+    // max-width: 100%;
+    transition: margin-left 1s ease;
+    img{
+        max-width: 600px;
+        max-height: 600px;
+        width: 600px;
+        object-fit: cover;
+    }
+}
+
+.slider__control{
+    position: absolute;
+    top: 45%;
+    width: rem(50px);
+    height: rem(50px);
+    cursor: pointer;
+    background-color: $base;
+    padding: rem(10px);
+    &:hover{
+        background-color: $base_hover;
+    }
+    &:active{
+        background-color: $base_active;
+    }
+}
+.right{
+    right: 0;
+}
+.left{
+    left: 0;
+    transform: rotate(180deg);
+}

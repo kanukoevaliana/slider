@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        title Document
+    body
+        nav.slider
+            ul.slider__list(data-current='0')
+                - var number = [1, 2, 3, 4, 5, 6, 7, 8]
+                each i in number
+                    li.slider__item
+                        img(src=`img/${i}.jpg`)
+            a.slider__control.left(href="#")
+                img(src="img/arrow.svg")
+            a.slider__control.right(href="#")
+                img(src="img/arrow.svg")
+    script(src="js/jQuery_min.js")
+    script(src="js/slider_2.js")
